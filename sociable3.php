@@ -55,7 +55,6 @@ class Sociable {
      * Set the default settings on activation on the plugin.
      */
     function activation_hook() {
-        do_action('deactivate', 'sociable');
     }
 
 

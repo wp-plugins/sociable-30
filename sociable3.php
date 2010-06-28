@@ -497,7 +497,7 @@ class Sociable {
                 </th>
                 <td>
                     <?php
-                        $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me a note: ", "sociable3") . "</a>";
+                        $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me an email", "sociable3") . "</a>";
                         echo __("Howdy, I'm here to help!", "sociable3") . " " . $email;
 
                      ?>

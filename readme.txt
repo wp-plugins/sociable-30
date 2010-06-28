@@ -3,7 +3,7 @@ Contributors: tompokress
 Tags: social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, share, sharethis, Digg, Facebook, Twitter, and del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 3.0.2
+Stable tag: 3.0.3
 
 
 

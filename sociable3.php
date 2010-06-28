@@ -3,7 +3,7 @@
 Plugin Name: Sociable 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 3.0.4
+Version: 4.0.0
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -76,7 +76,7 @@ class Sociable {
      * Add the Sociable menu to the Settings menu
      */
     function admin_menu_hook() {
-        $pages[] = add_options_page('Sociable 3', 'Sociable 3', 'manage_options', 'sociable3', array(&$this, 'options'));
+        $pages[] = add_options_page('Sociable WP3', 'Sociable WP3', 'manage_options', 'sociablewp3', array(&$this, 'options'));
 
         // Load scripts/styles for plugin pages only
         foreach ( (array) $pages as $page) {
@@ -84,8 +84,8 @@ class Sociable {
             add_action('admin_print_styles-' . $page, array(&$this, 'admin_print_styles'));
         }
 
-        add_meta_box('sociable3', 'Sociable 3', array(&$this, 'meta_box_hook'), 'post', 'side');
-        add_meta_box('sociable3', 'Sociable 3', array(&$this, 'meta_box_hook'), 'page','side');
+        add_meta_box('sociablewp3', 'Sociable WP3', array(&$this, 'meta_box_hook'), 'post', 'side');
+        add_meta_box('sociablewp3', 'Sociable WP3', array(&$this, 'meta_box_hook'), 'page','side');
     }
 
 
@@ -367,44 +367,33 @@ class Sociable {
      */
     function restore_defaults() {
 
-	    if (!is_array(get_option('sociable_active_sites')))
-		    update_option('sociable_active_sites', array(
-			    'Print',
-			    'Digg',
-			    'StumbleUpon',
-			    'del.icio.us',
-			    'Facebook',
-			    'YahooBuzz',
-                'Twitter',
-			    'Google'
-		    ));
+		update_option('sociable_active_sites', array(
+			'Print',
+			'Digg',
+			'StumbleUpon',
+			'del.icio.us',
+			'Facebook',
+			'YahooBuzz',
+            'Twitter',
+			'Google'));
 
-	    if (!is_string(get_option('sociable_tagline')))
-		    update_option('sociable_tagline', "<strong>" . __("Share and Enjoy:", 'sociable') . "</strong>");
+		update_option('sociable_tagline', "<strong>" . __("Share and Enjoy:", 'sociable') . "</strong>");
 
-	    if (!is_array(get_option('sociable_conditionals')))
-		    update_option('sociable_conditionals', array(
-			    'is_home' => False,
-			    'is_single' => True,
-			    'is_page' => True,
-			    'is_category' => False,
-			    'is_tag' => False,
-			    'is_date' => False,
-			    'is_search' => False,
-			    'is_author' => False,
-			    'is_feed' => False,
-		    ));
+		update_option('sociable_conditionals', array(
+			'is_home' => False,
+			'is_single' => True,
+			'is_page' => True,
+			'is_category' => False,
+			'is_tag' => False,
+			'is_date' => False,
+			'is_search' => False,
+			'is_author' => False,
+			'is_feed' => False,
+		));
 
-	    if (!( get_option('sociable_usecss') ) )
-		    update_option('sociable_usecss', true);
-
-	    if (!( get_option('sociable_disablealpha')))	{
-		    update_option('sociable_disablealpha', true);
-	    }
-
-	    if (!( get_option('sociable_disablesprite')) ) {
-		    update_option('sociable_disablesprite', false);
-	    }
+		update_option('sociable_usecss', true);
+		update_option('sociable_disablealpha', true);
+		update_option('sociable_disablesprite', false);
     }
 
     /**
@@ -413,7 +402,7 @@ class Sociable {
     function options() {
 	    $this->sites = apply_filters('sociable3_known_sites', $this->sites);
 
-	    if (isset($_REQUEST['restore']) && $_REQUEST['restore']) {
+	    if (isset($_REQUEST['restore'])) {
 		    check_admin_referer('sociable3-config');
 		    $this->restore_defaults();
 		    $message = __("Restored all settings to defaults.", 'sociable3');
@@ -484,176 +473,193 @@ class Sociable {
 	    uksort($disabled, "strnatcasecmp");
 
     ?>
-    <form action="" method="post">
-    <?php wp_nonce_field('sociable3-config'); ?>
-
     <div class="wrap">
 	    <?php screen_icon(); ?>
-	    <h2><?php _e("Sociable 3.0", 'sociable3'); ?></h2>
+	    <h2><?php _e("Sociable for WordPress 3.0", 'sociable3'); ?></h2>
 	    <table class="form-table">
             <tr>
                 <th>
-                    <?php _e("Bugs?  Enhancements?", "sociable3"); ?>
+                    <?php _e("Support", "sociable3"); ?>
                 </th>
                 <td>
-                    <?php
-                        $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me an email", "sociable3") . "</a>";
-                        echo __("Howdy, I'm here to help!", "sociable3") . " " . $email;
+                    <h3><?php _e("Please - support a starving programmer (me) with a $0.99 donation!", "sociable3"); ?></h3>
+                    <br/>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="H3YD2QYUJH8TY">
+                    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
 
-                     ?>
                 </td>
             </tr>
-	        <tr>
-		        <th>
-			        <?php _e("Sites", "sociable3"); ?>:<br/>
-			        <small><?php _e("Check the sites you want to appear on your site. Drag and drop sites to reorder them.", 'sociable3'); ?></small>
-		        </th>
-		        <td>
-			        <div style="width: 100%; height: 100%">
-			        <ul id="sociable_site_list">
-				        <?php foreach (array_merge($active, $disabled) as $sitename=>$site) { ?>
-					        <li id="<?php echo $sitename; ?>"
-						        class="sociable_site <?php echo (in_array($sitename, $active_sites)) ? "active" : "inactive"; ?>">
-						        <input
-							        type="checkbox"
-							        id="cb_<?php echo $sitename; ?>"
-							        name="active_sites[<?php echo $sitename; ?>]"
-							        <?php echo (in_array($sitename, $active_sites)) ? ' checked="checked"' : ''; ?>
-						        />
-						        <?php
-						        $imagepath = get_option('sociable_imagedir');
-
-						        if ($imagepath == "") {
-							        $imagepath = plugins_url('/images/', __FILE__);
-						        } else {
-							        $imagepath .= (substr($imagepath,strlen($imagepath)-1,1)=="/") ? "" : "/";
-						        }
-
-						        if (!isset($site['spriteCoordinates']) || get_option('sociable_disablesprite')) {
-							        if (strpos($site['favicon'], 'http') === 0) {
-								        $imgsrc = $site['favicon'];
-							        } else {
-								        $imgsrc = $imagepath.$site['favicon'];
-							        }
-							        echo "<img src=\"$imgsrc\" width=\"16\" height=\"16\" />";
-						        } else {
-							        $imgsrc = $imagepath."services-sprite.gif";
-							        $services_sprite_url = $imagepath . "services-sprite.png";
-							        $spriteCoords = $site['spriteCoordinates'];
-							        echo "<img src=\"$imgsrc\" width=\"16\" height=\"16\" style=\"background: transparent url($services_sprite_url) no-repeat; background-position:-$spriteCoords[0]px -$spriteCoords[1]px\" />";
-						        }
-
-						        echo $sitename; ?>
-					        </li>
-				        <?php } ?>
-			        </ul>
-			        </div>
-			        <input type="hidden" id="site_order" name="site_order" value="<?php echo join('|', array_keys($this->sites)) ?>" />
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Disable sprite usage for images?", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <input type="checkbox" name="disablesprite" <?php checked( get_option('sociable_disablesprite'), true ) ; ?> />
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Disable alpha mask on share toolbar?", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <input type="checkbox" name="disablealpha" <?php checked( get_option('sociable_disablealpha'), true ) ; ?> />
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Tagline", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <?php _e("Change the text displayed in front of the icons below. For complete customization, copy the contents of <em>sociable.css</em> in the Sociable plugin directory to your theme's <em>style.css</em> and disable the use of the sociable stylesheet below.", 'sociable3'); ?><br/>
-			        <input size="80" type="text" name="tagline" value="<?php echo esc_attr(stripslashes(get_option('sociable_tagline'))); ?>" />
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Position:", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <?php _e("The icons appear at the end of each blog post, and posts may show on many different types of pages. Depending on your theme and audience, it may be tacky to display icons on all types of pages.", 'sociable3'); ?><br/>
-			        <br/>
-			        <?php
-			        /**
-			         * Load conditions under which Sociable displays
-			         */
-			        $conditionals 	= get_option('sociable_conditionals');
-			        ?>
-			        <input type="checkbox" name="conditionals[is_home]"<?php checked($conditionals['is_home']); ?> /> <?php _e("Front page of the blog", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_single]"<?php checked($conditionals['is_single']); ?> /> <?php _e("Individual blog posts", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_page]"<?php checked($conditionals['is_page']); ?> /> <?php _e('Individual WordPress "Pages"', 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_category]"<?php checked($conditionals['is_category']); ?> /> <?php _e("Category archives", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_tag]"<?php checked($conditionals['is_tag']); ?> /> <?php _e("Tag listings", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_date]"<?php checked($conditionals['is_date']); ?> /> <?php _e("Date-based archives", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_author]"<?php checked($conditionals['is_author']); ?> /> <?php _e("Author archives", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_search]"<?php checked($conditionals['is_search']); ?> /> <?php _e("Search results", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="conditionals[is_feed]"<?php checked($conditionals['is_feed']); ?> /> <?php _e("RSS feed items", 'sociable3'); ?><br/>
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Use CSS:", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <input type="checkbox" name="usecss" <?php checked( get_option('sociable_usecss'), true ); ?> /> <?php _e("Use the sociable stylesheet?", "sociable3"); ?>
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Use Text Links:", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <input type="checkbox" name="usetextlinks" <?php checked( get_option('sociable_usetextlinks'), true ); ?> /> <?php _e("Use text links without images?", "sociable3"); ?>
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Image directory", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <?php _e("Sociable comes with a nice set of images, if you want to replace those with your own, enter the URL where you've put them in here, and make sure they have the same name as the ones that come with Sociable.", 'sociable3'); ?><br/>
-			        <input size="80" type="text" name="imagedir" value="<?php echo esc_attr(stripslashes(get_option('sociable_imagedir'))); ?>" /><br />
-			        (automatically disables sprite usage)
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("Open in new window:", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <input type="checkbox" name="usetargetblank" <?php checked( get_option('sociable_usetargetblank'), true ); ?> /> <?php _e("Use <code>target=_blank</code> on links? (Forces links to open a new window)", "sociable3"); ?>
-		        </td>
-	        </tr>
-	        <tr>
-		        <th scope="row" valign="top">
-			        <?php _e("awe.sm:", "sociable3"); ?>
-		        </th>
-		        <td>
-			        <?php _e("You can choose to automatically have the links posted to certain sites shortened via awe.sm and encoded with the channel info and your API Key.", 'sociable3'); ?><br/>
-			        <input type="checkbox" name="awesmenable" <?php checked( get_option('sociable_awesmenable'), true ); ?> /> <?php _e("Enable awe.sm URLs?", "sociable3"); ?><br/>
-			        <?php _e("awe.sm API Key:", 'sociable3'); ?> <input size="65" type="text" name="awesmapikey" value="<?php echo get_option('sociable_awesmapikey'); ?>" />
-		        </td>
-	        </tr>
-	        <tr>
-		        <td>&nbsp;</td>
-		        <td>
-			        <span class="submit"><input name="save" value="<?php _e("Save Changes", 'sociable3'); ?>" type="submit" /></span>
-			        <span class="submit"><input name="restore" value="<?php _e("Restore Built-in Defaults", 'sociable3'); ?>" type="submit"/></span>
-		        </td>
-	        </tr>
         </table>
+
+        <form action="" method="post">
+            <table class="form-table">
+                <?php wp_nonce_field('sociable3-config'); ?>
+                <tr>
+                    <th>
+                        <?php _e("Bugs?  Problems?", "sociable3"); ?>
+                    </th>
+                    <td>
+                        <?php
+                            $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me an email", "sociable3") . "</a>";
+                            echo __("I'm here to help!", "sociable3") . " " . $email;
+                         ?>
+                    </td>
+                </tr>
+	            <tr>
+		            <th>
+			            <?php _e("Sites", "sociable3"); ?>:<br/>
+			            <small><?php _e("Check the sites you want to appear on your site. Drag and drop sites to reorder them.", 'sociable3'); ?></small>
+		            </th>
+		            <td>
+			            <div style="width: 100%; height: 100%">
+			            <ul id="sociable_site_list">
+				            <?php foreach (array_merge($active, $disabled) as $sitename=>$site) { ?>
+					            <li id="<?php echo $sitename; ?>"
+						            class="sociable_site <?php echo (in_array($sitename, $active_sites)) ? "active" : "inactive"; ?>">
+						            <input
+							            type="checkbox"
+							            id="cb_<?php echo $sitename; ?>"
+							            name="active_sites[<?php echo $sitename; ?>]"
+							            <?php echo (in_array($sitename, $active_sites)) ? ' checked="checked"' : ''; ?>
+						            />
+						            <?php
+						            $imagepath = get_option('sociable_imagedir');
+
+						            if ($imagepath == "") {
+							            $imagepath = plugins_url('/images/', __FILE__);
+						            } else {
+							            $imagepath .= (substr($imagepath,strlen($imagepath)-1,1)=="/") ? "" : "/";
+						            }
+
+						            if (!isset($site['spriteCoordinates']) || get_option('sociable_disablesprite')) {
+							            if (strpos($site['favicon'], 'http') === 0) {
+								            $imgsrc = $site['favicon'];
+							            } else {
+								            $imgsrc = $imagepath.$site['favicon'];
+							            }
+							            echo "<img src=\"$imgsrc\" width=\"16\" height=\"16\" />";
+						            } else {
+							            $imgsrc = $imagepath."services-sprite.gif";
+							            $services_sprite_url = $imagepath . "services-sprite.png";
+							            $spriteCoords = $site['spriteCoordinates'];
+							            echo "<img src=\"$imgsrc\" width=\"16\" height=\"16\" style=\"background: transparent url($services_sprite_url) no-repeat; background-position:-$spriteCoords[0]px -$spriteCoords[1]px\" />";
+						            }
+
+						            echo $sitename; ?>
+					            </li>
+				            <?php } ?>
+			            </ul>
+			            </div>
+			            <input type="hidden" id="site_order" name="site_order" value="<?php echo join('|', array_keys($this->sites)) ?>" />
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Disable sprite usage for images?", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <input type="checkbox" name="disablesprite" <?php checked( get_option('sociable_disablesprite'), true ) ; ?> />
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Disable alpha mask on share toolbar?", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <input type="checkbox" name="disablealpha" <?php checked( get_option('sociable_disablealpha'), true ) ; ?> />
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Tagline", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <?php _e("Change the text displayed in front of the icons below. For complete customization, copy the contents of <em>sociable.css</em> in the Sociable plugin directory to your theme's <em>style.css</em> and disable the use of the sociable stylesheet below.", 'sociable3'); ?><br/>
+			            <input size="80" type="text" name="tagline" value="<?php echo esc_attr(stripslashes(get_option('sociable_tagline'))); ?>" />
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Position:", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <?php _e("The icons appear at the end of each blog post, and posts may show on many different types of pages. Depending on your theme and audience, it may be tacky to display icons on all types of pages.", 'sociable3'); ?><br/>
+			            <br/>
+			            <?php
+			            /**
+			             * Load conditions under which Sociable displays
+			             */
+			            $conditionals 	= get_option('sociable_conditionals');
+			            ?>
+			            <input type="checkbox" name="conditionals[is_home]"<?php checked($conditionals['is_home']); ?> /> <?php _e("Front page of the blog", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_single]"<?php checked($conditionals['is_single']); ?> /> <?php _e("Individual blog posts", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_page]"<?php checked($conditionals['is_page']); ?> /> <?php _e('Individual WordPress "Pages"', 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_category]"<?php checked($conditionals['is_category']); ?> /> <?php _e("Category archives", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_tag]"<?php checked($conditionals['is_tag']); ?> /> <?php _e("Tag listings", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_date]"<?php checked($conditionals['is_date']); ?> /> <?php _e("Date-based archives", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_author]"<?php checked($conditionals['is_author']); ?> /> <?php _e("Author archives", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_search]"<?php checked($conditionals['is_search']); ?> /> <?php _e("Search results", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="conditionals[is_feed]"<?php checked($conditionals['is_feed']); ?> /> <?php _e("RSS feed items", 'sociable3'); ?><br/>
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Use CSS:", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <input type="checkbox" name="usecss" <?php checked( get_option('sociable_usecss'), true ); ?> /> <?php _e("Use the sociable stylesheet?", "sociable3"); ?>
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Use Text Links:", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <input type="checkbox" name="usetextlinks" <?php checked( get_option('sociable_usetextlinks'), true ); ?> /> <?php _e("Use text links without images?", "sociable3"); ?>
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Image directory", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <?php _e("Sociable comes with a nice set of images, if you want to replace those with your own, enter the URL where you've put them in here, and make sure they have the same name as the ones that come with Sociable.", 'sociable3'); ?><br/>
+			            <input size="80" type="text" name="imagedir" value="<?php echo esc_attr(stripslashes(get_option('sociable_imagedir'))); ?>" /><br />
+			            (automatically disables sprite usage)
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("Open in new window:", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <input type="checkbox" name="usetargetblank" <?php checked( get_option('sociable_usetargetblank'), true ); ?> /> <?php _e("Use <code>target=_blank</code> on links? (Forces links to open a new window)", "sociable3"); ?>
+		            </td>
+	            </tr>
+	            <tr>
+		            <th scope="row" valign="top">
+			            <?php _e("awe.sm:", "sociable3"); ?>
+		            </th>
+		            <td>
+			            <?php _e("You can choose to automatically have the links posted to certain sites shortened via awe.sm and encoded with the channel info and your API Key.", 'sociable3'); ?><br/>
+			            <input type="checkbox" name="awesmenable" <?php checked( get_option('sociable_awesmenable'), true ); ?> /> <?php _e("Enable awe.sm URLs?", "sociable3"); ?><br/>
+			            <?php _e("awe.sm API Key:", 'sociable3'); ?> <input size="65" type="text" name="awesmapikey" value="<?php echo get_option('sociable_awesmapikey'); ?>" />
+		            </td>
+	            </tr>
+	            <tr>
+		            <td>&nbsp;</td>
+		            <td>
+			            <span class="submit"><input name="save" value="<?php _e("Save Changes", 'sociable3'); ?>" type="submit" /></span>
+			            <span class="submit"><input name="restore" value="<?php _e("Restore Built-in Defaults", 'sociable3'); ?>" type="submit"/></span>
+		            </td>
+	            </tr>
+            </table>
+        </form>
     </div>
-    </form>
     <?php
     }
 } // End class Sociable

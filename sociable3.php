@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Sociable 3.0
+Plugin Name: Sociable for WordPress 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 4.0.0
+Version: 4.0.1
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -57,8 +57,9 @@ class Sociable {
 
 
     function wp_print_scripts_hook() {
-        if (in_array('Add to favorites', get_option('sociable_active_sites'))) {
-            wp_enqueue_script('sociable3-addtofavorites',plugins_url('addtofavorites.js', __FILE__));
+        $active_sites = get_option('sociable_active_sites');
+        if (isset($active_sites) && in_array('Add to favorites', $active_sites)) {
+            wp_enqueue_script('sociable3-addtofavorites', plugins_url('addtofavorites.js', __FILE__));
         }
     }
 
@@ -122,13 +123,13 @@ class Sociable {
     /**
      * If the post is inserted, set the appropriate state for the sociable off setting.
      */
-    function wp_insert_post_hook($pID) {
+    function wp_insert_post_hook($post_id) {
         if (isset($_POST['sociableoff'])) {
-            if (!get_post_meta($post->ID,'_sociableoff',true))
-                add_post_meta($pID, '_sociableoff', true, true);
+            if (!get_post_meta($post_id, '_sociableoff', true))
+                add_post_meta($post_id, '_sociableoff', true, true);
         } else {
-            if (get_post_meta($post->ID,'_sociableoff',true))
-                delete_post_meta($pID, '_sociableoff');
+            if (get_post_meta($post_id, '_sociableoff', true))
+                delete_post_meta($post_id, '_sociableoff');
         }
     }
 

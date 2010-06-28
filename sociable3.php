@@ -7,7 +7,7 @@ Version: 3.0.2
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
-Copyright Peter Harkins (ph@malaprop.org), Joost de Valk (joost@yoast.com), blogplay.com (info@blogply.com)
+Copyright Peter Harkins (ph@malaprop.org), Joost de Valk (joost@yoast.com), blogplay(info@blogply.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -489,8 +489,20 @@ class Sociable {
 
     <div class="wrap">
 	    <?php screen_icon(); ?>
-	    <h2><?php _e("Sociable Options", 'sociable3'); ?></h2>
+	    <h2><?php _e("Sociable 3.0", 'sociable3'); ?></h2>
 	    <table class="form-table">
+            <tr>
+                <th>
+                    <?php _e("Bugs?  Enhancements?", "sociable3"); ?>
+                </th>
+                <td>
+                    <?php
+                        $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me a note: ", "sociable3") . "</a>";
+                        echo __("Howdy, I'm here to help!", "sociable3") . " " . $email;
+
+                     ?>
+                </td>
+            </tr>
 	        <tr>
 		        <th>
 			        <?php _e("Sites", "sociable3"); ?>:<br/>

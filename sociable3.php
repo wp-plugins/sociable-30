@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Sociable 3.0.1
+Plugin Name: Sociable 3.0.2
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 3.0.1
+Version: 3.0.2
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -76,7 +76,7 @@ class Sociable {
      * Add the Sociable menu to the Settings menu
      */
     function admin_menu_hook() {
-        $pages[] = add_options_page('sociable3', 'sociable3', 8, 'sociable3', array(&$this, 'options'));
+        $pages[] = add_options_page('Sociable 3', 'Sociable 3', 8, 'sociable3', array(&$this, 'options'));
 
         // Load scripts/styles for plugin pages only
         foreach ($pages as $page) {
@@ -84,8 +84,8 @@ class Sociable {
             add_action('admin_print_styles-' . $page, array(&$this, 'admin_print_styles'));
         }
 
-        add_meta_box('sociable3', 'Sociable', array(&$this, 'meta_box_hook'), 'post', 'side');
-        add_meta_box('sociable3', 'Sociable', array(&$this, 'meta_box_hook'), 'page','side');
+        add_meta_box('sociable3', 'Sociable 3', array(&$this, 'meta_box_hook'), 'post', 'side');
+        add_meta_box('sociable3', 'Sociable 3', array(&$this, 'meta_box_hook'), 'page','side');
     }
 
 

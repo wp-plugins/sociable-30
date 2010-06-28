@@ -1,15 +1,15 @@
-=== Sociable 3.0 ===
+=== Sociable for WordPress 3.0 ===
 Contributors: tompokress
 Tags: sociable, sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, and del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 3.0.4
+Stable tag: 4.0.5
 
-Sociable people need Sociable 3.0!  Social bookmarking plugin sociable updated for WordPress 3.0.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
+Sociable people need this social bookmarking plugin!  This is the famous Sociable plugin updated for WordPress 3.0.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
 == Description ==
 
-Sociable plugin gets an update to 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+Sociable plugin gets an update for WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
 == Installation ==
 
@@ -55,6 +55,9 @@ The Sociable plugin has been re-written and cleaned up with object-oriented code
 [Peter Harkins Sociable](http://push.cx/sociable) plugin.
 
 == Changelog ==
+= 4.0.5 =
+* Jumped to higher version, folks found 3.x confusing
+
 = 3.0.4 =
 * Fixed some remaining bugs in the old code: invalid arrays in foreach and permission levels
 

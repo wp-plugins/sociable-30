@@ -32,7 +32,7 @@
             'spriteCoordinates' => Array(73,1),
         ),
 
-        'Blogosphere News' => Array(
+        'Blogosphere' => Array(
             'favicon' => 'blogospherenews.png',
             'url' => 'http://www.blogospherenews.com/submit.php?url=PERMALINK&amp;title=TITLE',
             'spriteCoordinates' => Array(91,1),

@@ -3,7 +3,7 @@
 Plugin Name: Sociable 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 3.0.3
+Version: 3.0.4
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -57,7 +57,7 @@ class Sociable {
 
 
     function wp_print_scripts_hook() {
-        if (in_array('Add to favorites',get_option('sociable_active_sites'))) {
+        if (in_array('Add to favorites', get_option('sociable_active_sites'))) {
             wp_enqueue_script('sociable3-addtofavorites',plugins_url('addtofavorites.js', __FILE__));
         }
     }
@@ -76,10 +76,10 @@ class Sociable {
      * Add the Sociable menu to the Settings menu
      */
     function admin_menu_hook() {
-        $pages[] = add_options_page('Sociable 3', 'Sociable 3', 8, 'sociable3', array(&$this, 'options'));
+        $pages[] = add_options_page('Sociable 3', 'Sociable 3', 'manage_options', 'sociable3', array(&$this, 'options'));
 
         // Load scripts/styles for plugin pages only
-        foreach ($pages as $page) {
+        foreach ( (array) $pages as $page) {
             add_action('admin_print_scripts-' . $page, array(&$this, 'admin_print_scripts'));
             add_action('admin_print_styles-' . $page, array(&$this, 'admin_print_styles'));
         }
@@ -226,7 +226,7 @@ class Sociable {
 
 	    $i = 0;
 	    $totalsites = count($display);
-	    foreach($display as $sitename) {
+	    foreach( (array) $display as $sitename) {
 
 		    /**
 		     * If they specify an unknown or inactive site, ignore it.
@@ -421,9 +421,9 @@ class Sociable {
 	    } else if (isset($_REQUEST['save']) && $_REQUEST['save']) {
 		    check_admin_referer('sociable3-config');
 		    $active_sites = Array();
-		    if (!$_REQUEST['active_sites'])
+		    if (!isset($_REQUEST['active_sites']))
 			    $_REQUEST['active_sites'] = Array();
-		    foreach($_REQUEST['active_sites'] as $sitename=>$dummy)
+		    foreach( (array) $_REQUEST['active_sites'] as $sitename=>$dummy)
 			    $active_sites[] = $sitename;
 		    update_option('sociable_active_sites', $active_sites);
 		    /**
@@ -462,7 +462,7 @@ class Sociable {
 		    if (!array_key_exists('is_feed',$curconditionals)) {
 			    $curconditionals['is_feed'] = false;
 		    }
-		    foreach($curconditionals as $condition=>$toggled)
+		    foreach( (array) $curconditionals as $condition=>$toggled)
 			    $conditionals[$condition] = array_key_exists($condition, $_POST['conditionals']);
 
 		    update_option('sociable_conditionals', $conditionals);
@@ -477,14 +477,14 @@ class Sociable {
 	    $active_sites = get_option('sociable_active_sites');
 	    $active = Array();
 	    $disabled = $this->sites;
-	    foreach( $active_sites as $sitename ) {
+	    foreach( (array) $active_sites as $sitename ) {
 		    $active[$sitename] = $disabled[$sitename];
 		    unset($disabled[$sitename]);
 	    }
 	    uksort($disabled, "strnatcasecmp");
 
     ?>
-    <form action="<?php echo attribute_escape( $_SERVER['REQUEST_URI'] ); ?>" method="post">
+    <form action="" method="post">
     <?php wp_nonce_field('sociable3-config'); ?>
 
     <div class="wrap">
@@ -573,7 +573,7 @@ class Sociable {
 		        </th>
 		        <td>
 			        <?php _e("Change the text displayed in front of the icons below. For complete customization, copy the contents of <em>sociable.css</em> in the Sociable plugin directory to your theme's <em>style.css</em> and disable the use of the sociable stylesheet below.", 'sociable3'); ?><br/>
-			        <input size="80" type="text" name="tagline" value="<?php echo attribute_escape(stripslashes(get_option('sociable_tagline'))); ?>" />
+			        <input size="80" type="text" name="tagline" value="<?php echo esc_attr(stripslashes(get_option('sociable_tagline'))); ?>" />
 		        </td>
 	        </tr>
 	        <tr>
@@ -622,7 +622,7 @@ class Sociable {
 		        </th>
 		        <td>
 			        <?php _e("Sociable comes with a nice set of images, if you want to replace those with your own, enter the URL where you've put them in here, and make sure they have the same name as the ones that come with Sociable.", 'sociable3'); ?><br/>
-			        <input size="80" type="text" name="imagedir" value="<?php echo attribute_escape(stripslashes(get_option('sociable_imagedir'))); ?>" /><br />
+			        <input size="80" type="text" name="imagedir" value="<?php echo esc_attr(stripslashes(get_option('sociable_imagedir'))); ?>" /><br />
 			        (automatically disables sprite usage)
 		        </td>
 	        </tr>

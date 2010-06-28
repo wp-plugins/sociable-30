@@ -3,7 +3,7 @@ Contributors: tompokress
 Tags: sociable, sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, and del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 3.0.3
+Stable tag: 3.0.4
 
 Sociable people need Sociable 3.0!  Social bookmarking plugin sociable updated for WordPress 3.0.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
@@ -13,7 +13,7 @@ Sociable plugin gets an update to 3.0.  Add social bookmarks to posts, pages and
 
 == Installation ==
 
-1. Deactivate old Sociable versions 
+1. Deactivate old Sociable versions
 2. Unzip the sociable plugin zip file
 3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
 4. Activate the sociable plugin from the WordPress 'plugins' screen
@@ -21,7 +21,7 @@ Sociable plugin gets an update to 3.0.  Add social bookmarks to posts, pages and
 
 == Upgrade ==
 
-1. Deactivate old Sociable versions 
+1. Deactivate old Sociable versions
 2. Unzip the sociable plugin zip file
 3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
 4. Activate the sociable plugin from the WordPress 'plugins' screen
@@ -31,7 +31,7 @@ Sociable plugin gets an update to 3.0.  Add social bookmarks to posts, pages and
 
 Basically the same process as a new Sociable install.  Older Sociable versions can be upgraded to Sociable 3.0 just as if you were installing the Sociable plugin new.
 
-1. Deactivate old Sociable versions 
+1. Deactivate old Sociable versions
 2. Unzip the sociable plugin zip file
 3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
 4. Activate the sociable plugin from the WordPress 'plugins' screen
@@ -40,7 +40,7 @@ Basically the same process as a new Sociable install.  Older Sociable versions c
 == Advanced Users: ==
 
 The plugin hooks `the_content()` and `the_excerpt()` to display the Sociable social bookmarks automatically without requiring any explicit calls from your theme.  To precisely customize where the Sociable social bookmarks display, use the admin panel to turn off all display options and then add calls directly to your theme:
- 
+
 // This is optional extra customization for advanced users
 `<?php global $sociable; $sociable->sociable_html(); ?>` // all active sites
 `<?php global $sociable; $sociable->sociable_html(Array("Test", "Test2")); ?>` // only these sites if they are active
@@ -54,7 +54,10 @@ The Sociable plugin has been re-written and cleaned up with object-oriented code
 
 [Peter Harkins Sociable](http://push.cx/sociable) plugin.
 
-== Changelog == 
+== Changelog ==
+= 3.0.4 =
+* Fixed some remaining bugs in the old code: invalid arrays in foreach and permission levels
+
 = 3.0.3 =
 * Updated Sociable readme file with sociable installation instructions and sociable changelog
 
@@ -64,7 +67,7 @@ The Sociable plugin has been re-written and cleaned up with object-oriented code
 = 3.0.1 =
 * Sociable activation hook would hide plugin links, including the one for sociable - fixed
 
-= 3.0.0 = 
+= 3.0.0 =
 * Woo-hoo Sociable 3.0 released and working!  Sociable is now WordPress 3.0 compatible and many more enhancements to come.
 * Sociable core code re-written to object-oriented PHP and WP 3.0
 

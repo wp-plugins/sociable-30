@@ -7,7 +7,7 @@ Stable tag: 3.0.2
 
 
 
-Social bookmarking for the sociable!  Sociable updated for WordPress 3.0!  Automatically add social bookmarks to your posts, pages and RSS feeds.
+Sociable folks need social bookmarking!  Sociable updated for WordPress 3.0!  Automatically add social bookmarks to your posts, pages and RSS feeds.
 
 == Description ==
 

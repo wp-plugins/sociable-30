@@ -5,8 +5,6 @@ Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 3.0.3
 
-
-
 Sociable people need sociable 3.0!  Social bookmarking plugin sociable updated for WordPress 3.0!  Automatically add social bookmarks to your posts, pages and RSS feeds.
 
 == Description ==

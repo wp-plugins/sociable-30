@@ -34,7 +34,7 @@ class Sociable {
 
         /**
          * Hook the_content to output html if we should display on any page
-         */
+        */
         $sociable_contitionals = get_option('sociable_conditionals');
         if (is_array($sociable_contitionals) and in_array(true, $sociable_contitionals)) {
             add_filter('the_content', array(&$this, 'content_hook'));
@@ -53,6 +53,7 @@ class Sociable {
      * Set the default settings on activation on the plugin.
      */
     function activation_hook() {
+        $this->restore_defaults();
     }
 
 
@@ -473,10 +474,12 @@ class Sociable {
 	    $active_sites = get_option('sociable_active_sites');
 	    $active = Array();
 	    $disabled = $this->sites;
-	    foreach( (array) $active_sites as $sitename ) {
-		    $active[$sitename] = $disabled[$sitename];
-		    unset($disabled[$sitename]);
-	    }
+        if (is_array($active_sites)) {
+	        foreach( (array) $active_sites as $sitename ) {
+		        $active[$sitename] = $disabled[$sitename];
+		        unset($disabled[$sitename]);
+	        }
+        }
 	    uksort($disabled, "strnatcasecmp");
 
     ?>
@@ -531,7 +534,10 @@ class Sociable {
 							            type="checkbox"
 							            id="cb_<?php echo $sitename; ?>"
 							            name="active_sites[<?php echo $sitename; ?>]"
-							            <?php echo (in_array($sitename, $active_sites)) ? ' checked="checked"' : ''; ?>
+							            <?php
+                                            if (is_array($active_sites) && in_array($sitename, $active_sites))
+                                                echo ' checked="checked"';
+                                        ?>
 						            />
 						            <?php
 						            $imagepath = get_option('sociable_imagedir');

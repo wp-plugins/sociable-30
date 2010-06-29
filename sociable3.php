@@ -3,7 +3,7 @@
 Plugin Name: Sociable for WordPress 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 4.0.4
+Version: 4.0.5
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress

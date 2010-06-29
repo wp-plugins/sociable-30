@@ -1,6 +1,6 @@
 === Sociable for WordPress 3.0 ===
 Contributors: tompokress
-Tags: sociable, sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, and del.icio.us
+Tags: sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 4.0.2

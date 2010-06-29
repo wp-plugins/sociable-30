@@ -3,7 +3,7 @@
 Plugin Name: Sociable for WordPress 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 4.0.4
+Version: 4.0.5
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -236,7 +236,7 @@ class Sociable {
 		    /**
 		     * If they specify an unknown or inactive site, ignore it.
 		     */
-		    if (!in_array($sitename, $active_sites))
+		    if (!is_array($active_sites) || !in_array($sitename, $active_sites))
 			    continue;
 
 		    $site = $this->sites[$sitename];
@@ -529,7 +529,7 @@ class Sociable {
 			            <ul id="sociable_site_list">
 				            <?php foreach (array_merge($active, $disabled) as $sitename=>$site) { ?>
 					            <li id="<?php echo $sitename; ?>"
-						            class="sociable_site <?php echo (in_array($sitename, $active_sites)) ? "active" : "inactive"; ?>">
+						            class="sociable_site <?php (is_array($active_sites) && in_array($sitename, $active_sites)) ? "active" : "inactive"; ?>">
 						            <input
 							            type="checkbox"
 							            id="cb_<?php echo $sitename; ?>"

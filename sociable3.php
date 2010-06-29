@@ -3,7 +3,7 @@
 Plugin Name: Sociable for WordPress 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 4.0.2
+Version: 4.0.3
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -58,8 +58,10 @@ class Sociable {
 
     function wp_print_scripts_hook() {
         $active_sites = get_option('sociable_active_sites');
-        if (isset($active_sites) && in_array('Add to favorites', $active_sites)) {
-            wp_enqueue_script('sociable3-addtofavorites', plugins_url('addtofavorites.js', __FILE__));
+        if ($active_sites) {
+            if (in_array('Add to favorites', $active_sites)) {
+                wp_enqueue_script('sociable3-addtofavorites', plugins_url('addtofavorites.js', __FILE__));
+            }
         }
     }
 
@@ -322,7 +324,7 @@ class Sociable {
 			    /**
 			     * If site doesn't have sprite information
 			     */
-			    if (!isset($site['spriteCoordinates']) || get_option('sociable_disablesprite',false) || is_feed()) {
+			    if (!isset($site['spriteCoordinates']) || get_option('sociable_disablesprite') || is_feed()) {
 				    if (strpos($site['favicon'], 'http') === 0) {
 					    $imgsrc = $site['favicon'];
 				    } else {

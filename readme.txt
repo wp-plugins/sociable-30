@@ -3,7 +3,7 @@ Contributors: tompokress
 Tags: sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 4.0.4
+Stable tag: 4.0.5
 
 Sociable people need this social bookmarking plugin!  This is the famous Sociable plugin updated for WordPress 3.0.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
@@ -55,11 +55,8 @@ The Sociable plugin has been re-written and cleaned up with object-oriented code
 [Peter Harkins Sociable](http://push.cx/sociable) plugin.
 
 == Changelog ==
-= 4.0.4 =
-* Type errors on fresh installs - fixed
-
-= 4.0.3 =
-* Finally squashed the pesky in_array bug!
+= 4.0.3 - 4.0.5 =
+* Yikes, lots of in_array bugs!
 
 = 4.0.2 =
 * Fixed bug that prevented meta box from displaying in post edit screen

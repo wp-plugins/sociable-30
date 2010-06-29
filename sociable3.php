@@ -28,6 +28,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 class Sociable {
 
+    var $debug;
+
     function Sociable() {
 	    load_plugin_textdomain('sociable3', false, 'i18n');
         register_activation_hook(__FILE__, array(&$this, 'activation_hook'));
@@ -47,6 +49,9 @@ class Sociable {
         add_action('admin_menu', array(&$this, 'admin_menu_hook'));
 
         include dirname( __FILE__ ) . '/icons.php';
+
+        if (isset($_GET['s3_debug']))
+            $this->debug = true;
     }
 
     /**
@@ -142,6 +147,11 @@ class Sociable {
      */
     function content_hook($content='') {
         $conditionals = get_option('sociable_conditionals');
+
+        if ($this->debug) {
+            echo "<!-- content_hook: content = " . $content . ", conditionals = " . print_r($conditionals, true) . " -->";
+        }
+
         if ((is_home()     and $conditionals['is_home']) or
             (is_single()   and $conditionals['is_single']) or
             (is_page()     and $conditionals['is_page']) or
@@ -156,6 +166,7 @@ class Sociable {
             $sociable_html = strip_tags($sociable_html, "<a><img>");
             $content .= $sociable_html . "<br/><br/>";
         }
+
         return $content;
     }
 

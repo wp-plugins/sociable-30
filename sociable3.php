@@ -3,7 +3,7 @@
 Plugin Name: Sociable for WordPress 3.0
 Plugin URI: http://wordpress.org/extend/plugins/sociable3
 Description: WordPress 3.0 social bookmarking: add links on your posts,  pages and RSS feeds
-Version: 4.0.1
+Version: 4.0.2
 Author: Tom Pokress
 
 Copyright 2010-present Tom Pokress
@@ -110,9 +110,10 @@ class Sociable {
      * Displays a checkbox that allows users to disable Sociable on a
      * per post or page basis.
      */
-    function meta_box_hook() {
+    function meta_box_hook($post) {
+
         $sociableoff = false;
-        if (get_post_meta($post->ID,'_sociableoff',true)) {
+        if (get_post_meta($post->ID,'_sociableoff', true)) {
             $sociableoff = true;
         }
         ?>
@@ -250,7 +251,7 @@ class Sociable {
 			    $description = $sitename;
 		    }
 
-		    if (get_option('sociable_awesmenable') == true &! empty($site['awesm_channel']) ) {
+		    if (get_option('sociable_awesmenable') == true && !empty($site['awesm_channel']) ) {
 			    /**
 			     * if awe.sm is enabled and it is an awe.sm supported site, use awe.sm
 			     */
@@ -395,6 +396,9 @@ class Sociable {
 		update_option('sociable_usecss', true);
 		update_option('sociable_disablealpha', true);
 		update_option('sociable_disablesprite', false);
+        update_option('sociable_usetextlinks', false);
+        update_option('sociable_usetargetblank', false);
+        update_option('awesmenable', false);
     }
 
     /**
@@ -449,7 +453,7 @@ class Sociable {
 			    $_POST['conditionals'] = Array();
 
 		    $curconditionals = get_option('sociable_conditionals');
-		    if (!array_key_exists('is_feed',$curconditionals)) {
+            if (isset($curconditionals) && !array_key_exists('is_feed',$curconditionals)) {
 			    $curconditionals['is_feed'] = false;
 		    }
 		    foreach( (array) $curconditionals as $condition=>$toggled)
@@ -506,7 +510,7 @@ class Sociable {
                     <td>
                         <?php
                             $email = "<a href='mailto:tompokress@gmail.com'>" . __("Send me an email", "sociable3") . "</a>";
-                            echo __("I'm here to help!", "sociable3") . " " . $email;
+                            echo "<b>" . __("I'm here to help!", "sociable3") . " " . $email . "</b>";
                          ?>
                     </td>
                 </tr>

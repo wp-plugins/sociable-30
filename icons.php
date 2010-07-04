@@ -568,27 +568,6 @@
              'spriteCoordinates' => Array(217,73),
         ),
 
-        '豆瓣' => Array(
-            'favicon' => 'douban.png',
-            'url' => 'http://www.douban.com/recommend/?url=PERMALINK&title=TITLE',
-            'description' => '豆瓣',
-            'spriteCoordinates' => Array(235,73),
-        ),
-
-        '豆瓣�?点' => Array(
-            'favicon' => 'douban9.png',
-            'url' => 'http://www.douban.com/recommend/?url=PERMALINK&title=TITLE&n=1',
-            'description' => '豆瓣�?点',
-            'spriteCoordinates' => Array(253,73),
-        ),
-
-        'QQ书签' => Array(
-            'favicon' => 'qq.png',
-            'url' => 'http://shuqian.qq.com/post?jumpback=1&title=TITLE&uri=PERMALINK',
-            'description' => 'QQ书签',
-            'spriteCoordinates' => Array(271,73),
-        ),
-
         'LaTafanera' => Array(
             'favicon' => 'latafanera.png',
             'url' => 'http://latafanera.cat/submit.php?url=PERMALINK',
@@ -606,13 +585,5 @@
             'url' => 'http://www.viadeo.com/shareit/share/?url=PERMALINK&title=TITLE&urllanguage=fr',
             'spriteCoordinates' => Array(325,73),
         ),
-
-        'Diggita' => Array(
-            'favicon' => 'diggita.png',
-            'url' => 'http://www.diggita.it/submit.php?url=PERMALINK&title=TITLE',
-            'description' => 'Diggita',
-            'spriteCoordinates' => Array(343,73),
-        ),
-
     );
 ?>

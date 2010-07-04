@@ -1,15 +1,19 @@
 === Sociable for WordPress 3.0 ===
 Contributors: tompokress
-Tags: sociable, social, bookmark, social bookmarks, social bookmark, bookmarks, bookmarking, social bookmarking, facebook, sharing, sociable, share, sharethis, Digg, Facebook, Twitter, del.icio.us
+Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,facebook,sharing,sociable,share,sharethis,Digg,Facebook,Twitter,del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 4.0.5
+Stable tag: 4.0.6
 
-Sociable people need this social bookmarking plugin!  This is the famous Sociable plugin updated for WordPress 3.0.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
+The famous Sociable plugin now for WordPress 3.0 and multisite.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
 == Description ==
 
-Sociable plugin gets an update for WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+Sociable plugin for WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+
+NEW:
+* I18N fixed - please send me your translations!
+* Options updated for WordPress 3.0 including WPMU/multisite installations
 
 == Installation ==
 
@@ -42,21 +46,28 @@ Basically the same process as a new Sociable install.  Older Sociable versions c
 The plugin hooks `the_content()` and `the_excerpt()` to display the Sociable social bookmarks automatically without requiring any explicit calls from your theme.  To precisely customize where the Sociable social bookmarks display, use the admin panel to turn off all display options and then add calls directly to your theme:
 
 // This is optional extra customization for advanced users
-`<?php global $sociable; $sociable->sociable_html(); ?>` // all active sites
-`<?php global $sociable; $sociable->sociable_html(Array("Test", "Test2")); ?>` // only these sites if they are active
+`<?php global $sociable; echo $sociable->get_links(); ?>` // all active sites
+`<?php global $sociable; echo $sociable->get_links(Array('blogmarks', 'Blogosphere')); ?>` // only these sites if they are active
 
 == Frequently Asked Questions ==
 
 = How has Sociable been improved in this version? =
-The Sociable plugin has been re-written and cleaned up with object-oriented code - and updated for WordPress 3.0 compatibility.  Now look for new Sociable features coming soon!
+The Sociable plugin has been re-written and cleaned up with object-oriented code - and updated for WordPress 3.0 / multisite compatibility.  Now look for new Sociable features coming soon!
 
 == Credits ==
 
 [Peter Harkins Sociable](http://push.cx/sociable) plugin.
 
 == Changelog ==
+= 4.0.6 =
+* i18n fixed
+* Options are now (I think) WPMU/multisite compatible
+* "Use CSS" option removed - for custom CSS create a file "sociable_custom.css" in the sociable directory
+* usetextlinks and disablesprites removed
+* awe.sm options removed
+
 = 4.0.3 - 4.0.5 =
-* Yikes, lots of in_array bugs!
+* Various array type bugs fixed
 
 = 4.0.2 =
 * Fixed bug that prevented meta box from displaying in post edit screen

@@ -11,7 +11,7 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0 and mul
 
 Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
-NEW:
+= NEW =
 * I18N fixed - please send me your translations!
 * Options updated for WordPress 3.0 including WPMU/multisite installations
 

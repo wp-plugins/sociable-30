@@ -3,7 +3,7 @@ Contributors: tompokress
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,facebook,sharing,sociable,share,sharethis,Digg,Facebook,Twitter,del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 4.0.6b
+Stable tag: 4.0.7
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0 and multisite.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 

@@ -5,11 +5,11 @@ Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 4.0.6
 
-The famous Sociable plugin now for WordPress 3.0 and multisite.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
+The famous Sociable plugin now updated and compatible with WordPress 3.0 and multisite.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
 == Description ==
 
-Sociable plugin for WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
 NEW:
 * I18N fixed - please send me your translations!
@@ -17,29 +17,19 @@ NEW:
 
 == Installation ==
 
-1. Deactivate old Sociable versions
+1. Deactivate any old Sociable versions
 2. Unzip the sociable plugin zip file
-3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
+3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable-30
 4. Activate the sociable plugin from the WordPress 'plugins' screen
 5. Use the sociable settings page to activate your bookmarks (only a few are active by default)
 
 == Upgrade ==
 
-1. Deactivate old Sociable versions
+1. Deactivate any old Sociable versions
 2. Unzip the sociable plugin zip file
-3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
-4. Activate the sociable plugin from the WordPress 'plugins' screen
-5. Use the sociable settings page to activate your bookmarks (only a few are active by default)65. Deactivate any old versions of Sociable!
-
-== Upgrading Older Versions ==
-
-Basically the same process as a new Sociable install.  Older Sociable versions can be upgraded to Sociable 3.0 just as if you were installing the Sociable plugin new.
-
-1. Deactivate old Sociable versions
-2. Unzip the sociable plugin zip file
-3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable3
-4. Activate the sociable plugin from the WordPress 'plugins' screen
-5. Use the sociable settings page to activate your bookmarks (only a few are active by default)65. Deactivate any old versions of Sociable!
+3. Upload the sociable plugin files to folder /wp-contents/plugins/sociable-30
+4. Activate the plugin from the WordPress 'plugins' screen
+5. Use the settings page to activate your bookmarks (only a few are active by default). 
 
 == Advanced Users: ==
 
@@ -51,8 +41,15 @@ The plugin hooks `the_content()` and `the_excerpt()` to display the Sociable soc
 
 == Frequently Asked Questions ==
 
-= How has Sociable been improved in this version? =
-The Sociable plugin has been re-written and cleaned up with object-oriented code - and updated for WordPress 3.0 / multisite compatibility.  Now look for new Sociable features coming soon!
+= How can I add a new site? =
+You can send it to me for inclusion in the next version of the plugin or do it yourself by editing the sites.php file and add the icon to the images directory.
+
+= How can I change the CSS? =
+You can add a 'sociable_custom.css' to the plugin directory and it will be included (along with the original) when the plugin is loaded.  Override the settings you need changed.
+
+= How has Sociable been updated? =
+The plugin has been rewritten to fix bugs in past versions and make it WordPress 3.0 and multisite compatible.  It's now supported and lots of enhancements are coming soon.
+
 
 == Credits ==
 

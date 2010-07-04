@@ -3,7 +3,7 @@ Contributors: tompokress
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,facebook,sharing,sociable,share,sharethis,Digg,Facebook,Twitter,del.icio.us
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 4.0.6
+Stable tag: 4.0.6b
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0 and multisite.  Add great-looking social bookmarks to your posts, pages and RSS feeds.
 
@@ -29,7 +29,7 @@ Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different soc
 2. Unzip the sociable plugin zip file
 3. Upload the sociable plugin files to folder /wp-contents/plugins/sociable-30
 4. Activate the plugin from the WordPress 'plugins' screen
-5. Use the settings page to activate your bookmarks (only a few are active by default). 
+5. Use the settings page to activate your bookmarks (only a few are active by default).
 
 == Advanced Users: ==
 

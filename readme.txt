@@ -96,4 +96,4 @@ The plugin has been rewritten to fix bugs in past versions and make it WordPress
 == Screenshots ==
 1. Sociable options screen.  Just drag and drop the bookmarks to change their display order.
 2. Sociable with default styling.
-
+3. Sociable in action

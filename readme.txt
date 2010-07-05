@@ -38,7 +38,7 @@ A [sociable] shortcode is available so you can place the Sociable bookmarks anyw
 
 Another option is to turn off the automatic bookmarks display in the Sociable options screen and add calls directly to your theme.  With this approach you can also specify which sites to display:
 `
-// Show all activate sites
+// Show all active sites
 <?php global $sociable; echo $sociable->get_links(); ?>
 
 // Show only these two sites if they are active

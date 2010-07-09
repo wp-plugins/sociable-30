@@ -1,16 +1,17 @@
 === Sociable for WordPress 3.0 ===
 Contributors: tompokress
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H3YD2QYUJH8TY
-Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,facebook,sharing,sociable,share,sharethis,Digg,Facebook,Twitter,del.icio.us
+Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 4.0.8
+Stable tag: 4.0.9
 
 == Description ==
 
-The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from 99 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
 = NEW =
+* Orkut and Google Buzz added
 * A [sociable] shortcode is now available - see the "Other Notes" section
 * Options completely rewritten for WordPress 3.0 including WPMU/multisite installations
 * I18N fixed - please send me your updated translations!
@@ -57,6 +58,11 @@ You can add a 'sociable_custom.css' to the plugin directory and it will be inclu
 The plugin has been rewritten to fix bugs in past versions and make it WordPress 3.0 and multisite compatible.  It's now supported and lots of enhancements are coming soon.
 
 == Changelog ==
+
+= 4.0.9 =
+* Added Orkut, Google Buzz services
+* New code for icon paths and urls
+* Admin screen bug fix, site order field removed
 
 = 4.0.8 =
 * Added [sociable] shortcode

@@ -481,7 +481,7 @@ class Sociable {
                     <td>
                     <ul>
                         <li><img src='<?php echo plugins_url('/images/check.png', __FILE__)?>' />10 Sets of new icons</li>
-                        <li><img src='<?php echo plugins_url('/images/check.png', __FILE__)?>' />Multiple icon sizes</li>
+                        <li><img src='<?php echo plugins_url('/images/check.png', __FILE__)?>' />Use your own icons</li>
                         <li><img src='<?php echo plugins_url('/images/check.png', __FILE__)?>' />Themeable CSS tooltips</li>
                     </ul>
                     </td>

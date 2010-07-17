@@ -59,9 +59,16 @@ Another option is to turn off the automatic bookmarks display in the Sociable op
 = How can I use my own icons? =
 Make sure you're using [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro).  Custom icons aren't supported in the free version.
 
-If you're using Sociable Pro, just put your icons in the directory `/images/custom/size` (where 'size' is the icon size).  For example put your 16x16 icons in `images/custom/size/16`
+Pro includes 10 icon sets.  You can find more at the links below or at many other sites:
+[http://www.online-blogger.net/2010/02/02/100-social-media-icon-sets/](http://www.online-blogger.net/2010/02/02/100-social-media-icon-sets/)
+[http://coderplus.com/blog/2009/11/social-bookmarking-icon-packs/](http://coderplus.com/blog/2009/11/social-bookmarking-icon-packs/)
+[http://www.komodomedia.com/download/](http://www.komodomedia.com/download/)
+
+Just put your icons in the directory `/images/custom/size` (where 'size' is the icon size).  For example put your 16x16 icons in `images/custom/size/16`
 
 Your icons will then be available right from the settings screen.
+
+If you have multiple sets of icons and you want to switch between them you can also edit the file 'pro.php' to specify the icon set names and directories.
 
 = How can I add a new site? =
 The easiest way is to send it to me for inclusion in the next version of the plugin.  But you can also do it yourself by editing the sites.php file and adding the icon to the images directory.
@@ -76,6 +83,8 @@ The plugin has been rewritten to fix bugs in past versions and make it WordPress
 
 = 5.01 =
 * Fixed bug in target=blank, should now work correctly
+* Fixed directory for 'tydlinka' icons in Pro
+* Added links to other icon sets in Pro
 
 = 5.00 =
 * Update to Buzz link, bug fixes in shortcode and template tags

@@ -10,6 +10,15 @@ Stable tag: 5.01
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
+= FEATURES =
+* Sociable plugin rewritten for WordPress 3.0 and multisite
+* Includes 99 social bookmarking sites
+* Add your own sites
+* Icons are automatically added to posts, pages or RSS feeds, you control which ones
+* Use the Sociable template tag and shortcode for precise control
+* Use the included icon sets or add your own
+* Themeable CSS tooltips when the user mouses over the icons
+
 = NEW =
 * [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) is now available on the WPPlugins.com store!  It includes 10 new icon sets in different sizes, custom CSS tooltips and the option to use your own custom icons
 * Plurk added
@@ -24,14 +33,6 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 3. Upload the sociable plugin files to your sociable folder /wp-contents/plugins/sociable-30
 4. Activate the sociable plugin from the WordPress 'plugins' screen
 5. Use the sociable settings page to activate your bookmarks (only a few are active by default)
-
-== Upgrade ==
-
-1. Deactivate any old Sociable versions
-2. Unzip the sociable plugin zip file
-3. Upload the sociable plugin files to folder /wp-contents/plugins/sociable-30
-4. Activate the plugin from the WordPress 'plugins' screen
-5. Use the settings page to activate your bookmarks (only a few are active by default).
 
 == Advanced Users ==
 
@@ -125,15 +126,6 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 = 4.0.0 =
 * Woo-hoo Sociable for WordPress 3.0 released and working!  Sociable is now WordPress 3.0 compatible and many more enhancements to come.
 * Sociable core code re-written to object-oriented PHP and WP 3.0
-
-== Features ==
-
-* Sociable plugin upgraded to WordPress 3.0
-* Includes 99 social bookmarking sites
-* Create your own sites
-* Bookmarks are automatically added to posts, pages or RSS feeds
-* You control which posts/pages display booksmarks
-* Use our icons or add your own
 
 == Screenshots ==
 1. Sociable options screen.  Just drag and drop the bookmarks to change their display order.

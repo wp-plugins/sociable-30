@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 5.01
+Stable tag: 5.02
 
 == Description ==
 
@@ -21,6 +21,7 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 
 = NEW =
 * [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) is now available on the WPPlugins.com store!  It includes 10 new icon sets in different sizes, custom CSS tooltips and the option to use your own custom icons
+* Icon captions are now available - check your Sociable settings page
 * Plurk added
 * Orkut and Google Buzz added
 * A [sociable] shortcode is now available - see the "Other Notes" section
@@ -85,6 +86,11 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 
 == Changelog ==
+
+= 5.02 =
+* Icon captions added.  Set checkbox on the Sociable settings screen to display the site name next to each icon.
+* Captions are enclosed in a <span> tag, e.g. <a><img><span>caption</span></a>.  Style captions with class 'socable_caption'.
+* Moved Sociable filter for other plugins that may activate after Sociable
 
 = 5.01 =
 * Fixed bug in target=blank, should now work correctly

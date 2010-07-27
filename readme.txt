@@ -1,31 +1,41 @@
 === Sociable for WordPress 3.0 ===
 Contributors: tompokress
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H3YD2QYUJH8TY
-Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg
+Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg, XHTML, facebook, facebook like, like button, facebook button, facebook like button, bit.ly, bitly, bebo
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 5.02
+Stable tag: 5.03
 
 == Description ==
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
 = FEATURES =
-* Sociable plugin rewritten for WordPress 3.0 and multisite
-* Includes 99 social bookmarking sites
-* Add your own sites
+* Social bookmarking for WordPress 3.0 and multisite
+* Includes 99 social bookmarking sites or add your own sites
+* Bit.ly URL shortening and Facebook 'like' buttons
+* Facebook 'like button'
 * Icons are automatically added to posts, pages or RSS feeds, you control which ones
-* Use the Sociable template tag and shortcode for precise control
+* Sociable template tag and shortcode for precise control
 * Use the included icon sets or add your own
 * Themeable CSS tooltips when the user mouses over the icons
+* Fully XHTML compliant
 
 = NEW =
-* [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) is now available on the WPPlugins.com store!  It includes 10 new icon sets in different sizes, custom CSS tooltips and the option to use your own custom icons
-* Icon captions are now available - check your Sociable settings page
-* Plurk added
-* Orkut and Google Buzz added
-* A [sociable] shortcode is now available - see the "Other Notes" section
-* Options completely rewritten for WordPress 3.0 including WPMU/multisite installations
+* Added Bebo service
+* Added icon captions
+* Added bit.ly URL shortening for [Pro version](http://wpplugins.com/plugin/155/sociable-pro) using the latest (V3) bit.ly API
+* Added Facebook 'like' buttons for [Pro version](http://wpplugins.com/plugin/155/sociable-pro)
+* Added "Follow" icon set for [Pro version](http://wpplugins.com/plugin/155/sociable-pro)
+* Plurk, Orkut and Google Buzz added
+
+= Pro Version =
+* Get the [Pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
+* Bit.ly URL shortening for twitter
+* Facebook 'like' button
+* Custom CSS tooltips
+* 10 new icon sets in different sizes (icons are included only for popular services; see the wpplugins.com description for a list)
+* Easily add your own custom icons
 
 == Installation ==
 
@@ -87,6 +97,14 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 == Changelog ==
 
+= 5.03 =
+* Bit.ly support added to Pro version.  Uses V3 API.  Short URLs are saved to the post to speed up fetching.
+* Facebook 'like' button added to Pro version.  Note that you can adjust the CSS for the iframe in sociable.css.
+* Tweaks to CSS to make icons closer (as they were originally) when the captions aren't displayed.  Check your site after upgrading.
+* Rewrote URL generation to be faster and only require one database read per post
+* Bebo service added
+* "Follow" icon set added to Pro
+
 = 5.02 =
 * Icon captions added.  Set checkbox on the Sociable settings screen to display the site name next to each icon.
 * Captions are enclosed in a <span> tag, e.g. <a><img><span>caption</span></a>.  Style captions with class 'socable_caption'.
@@ -134,9 +152,10 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 * Sociable core code re-written to object-oriented PHP and WP 3.0
 
 == Screenshots ==
-1. Sociable options screen.  Just drag and drop the bookmarks to change their display order.
-2. Sociable with default styling.
-3. Sociable in action
+1. Sociable icons
+2. Sociable in a blog
+3. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) Facebook 'like' button with comments
 4. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) twitter icons
 5. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) tooltips
 6. A few of the [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) icon sets
+7. Sociable options screen.  Just drag and drop the bookmarks to change their display order.

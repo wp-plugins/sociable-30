@@ -12,16 +12,21 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite
-* Includes 99 social bookmarking sites or add your own sites
-* Bit.ly URL shortening and Facebook 'like' buttons
-* Facebook 'like button'
-* Icons are automatically added to posts, pages or RSS feeds, you control which ones
-* Sociable template tag and shortcode for precise control
-* Use the included icon sets or add your own
-* Themeable CSS tooltips when the user mouses over the icons
+* 99 social bookmarking services included 
+* Add your own services
+* Icons are automatically added to posts, pages or RSS feeds
+* Template tag and shortcode are provided for precise control
 * Fully XHTML compliant
 
-= NEW =
+= GET PRO =
+* Get the [Pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
+* Bit.ly URL shortening for twitter
+* Facebook 'like' button
+* Custom, themeable CSS tooltips
+* 10 new icon sets in different sizes (icons are included only for popular services; see the wpplugins.com description for a list)
+* Easily add your own custom icon sets
+
+= WHAT'S NEW =
 * Added Bebo service
 * Added icon captions
 * Added bit.ly URL shortening for [Pro version](http://wpplugins.com/plugin/155/sociable-pro) using the latest (V3) bit.ly API
@@ -29,13 +34,6 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 * Added "Follow" icon set for [Pro version](http://wpplugins.com/plugin/155/sociable-pro)
 * Plurk, Orkut and Google Buzz added
 
-= Pro Version =
-* Get the [Pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
-* Bit.ly URL shortening for twitter
-* Facebook 'like' button
-* Custom CSS tooltips
-* 10 new icon sets in different sizes (icons are included only for popular services; see the wpplugins.com description for a list)
-* Easily add your own custom icons
 
 == Installation ==
 

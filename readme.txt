@@ -10,9 +10,6 @@ Stable tag: 5.05
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
-= NEWS =
-* 5.05 includes another attempt to fix the issue with icons not wrapping in FireFox.
-
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite
 * 99 social bookmarking services included

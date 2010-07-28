@@ -4,11 +4,14 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg, XHTML, facebook, facebook like, like button, facebook button, facebook like button, bit.ly, bitly, bebo
 Requires at least: 2.7
 Tested up to: 3.0
-Stable tag: 5.04
+Stable tag: 5.05
 
 == Description ==
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+
+= NEWS =
+* 5.05 includes another attempt to fix the issue with icons not wrapping in FireFox.
 
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite
@@ -25,15 +28,6 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 * Custom, themeable CSS tooltips
 * 10 new icon sets in different sizes (icons are included only for popular services; see the wpplugins.com description for a list)
 * Easily add your own custom icon sets
-
-= WHAT'S NEW =
-* 5.04 Should fix an issue some folks had with icons not wrapping
-* Added Bebo service
-* Added icon captions
-* Added bit.ly URL shortening for [Pro version](http://wpplugins.com/plugin/155/sociable-pro) using the latest (V3) bit.ly API
-* Added Facebook 'like' buttons for [Pro version](http://wpplugins.com/plugin/155/sociable-pro)
-* Added "Follow" icon set for [Pro version](http://wpplugins.com/plugin/155/sociable-pro)
-* Plurk, Orkut and Google Buzz added
 
 
 == Installation ==
@@ -95,6 +89,10 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 
 == Changelog ==
+
+= 5.05 =
+* The 5.04 fix only worked for IE.  This one should fix Firefox as well.
+* The problem was caused by using 'white-space:nowrap' to attempt to keep the image captions with the icons during line wraps
 
 = 5.04 =
 * Fix for CSS issue some folks had with icons not wrapping

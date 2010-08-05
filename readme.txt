@@ -2,13 +2,19 @@
 Contributors: tompokress
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H3YD2QYUJH8TY
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg, XHTML, facebook, facebook like, like button, facebook button, facebook like button, bit.ly, bitly, bebo
-Requires at least: 2.7
+Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 5.07
+Stable tag: 5.08
 
 == Description ==
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
+
+= NEW =
+* I'd like to hear from you!  Please don't be shy about writing with your suggestions and enhancements.
+* Fixed issue with icon backgrounds in some themes
+* Added option for facebook 'like' button and text color scheme for [pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
+* Added option for facebook faces [pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
 
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite
@@ -86,6 +92,11 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 
 == Changelog ==
+
+= 5.08 =
+* Added !important modifier to CSS for images to prevent overrides by some themes
+* Added option to choose Facebook like button/text colors
+* Added option to show Facebook faces.  Note that currently this inserts too much space before the icons; in a future release I'll use the javascript libraries which allow a 'drop down' effect instead.
 
 = 5.07 =
 * Added code to block PRO version from wordpress repository updates (which will downgrade to regular version)

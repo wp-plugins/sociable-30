@@ -13,8 +13,8 @@ The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add s
 = NEW =
 * I'd like to hear from you!  Please don't be shy about writing with your suggestions and enhancements.
 * Fixed issue with icon backgrounds in some themes
-* Added option for facebook 'like' button and text color scheme for [pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
-* Added option for facebook faces [pro version](http://wpplugins.com/plugin/155/sociable-pro) for even more functionality!
+* Added option for facebook 'like' button and text color scheme to [pro version](http://wpplugins.com/plugin/155/sociable-pro)
+* Added option for facebook faces to [pro version](http://wpplugins.com/plugin/155/sociable-pro) 
 
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite

@@ -4,17 +4,23 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg, XHTML, facebook, facebook like, like button, facebook button, facebook like button, bit.ly, bitly, bebo
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 5.08
+Stable tag: 5.09
 
 == Description ==
 
 The famous Sociable plugin now updated and compatible with WordPress 3.0.  Add social bookmarks to posts, pages and RSS feeds. Choose from more than 100 different social bookmarking sites like Digg, Facebook, and del.icio.us, or add your own sites!
 
 = NEW =
+* Fixed: incorrect spacing for the the Facebook 'standard' icon
+* Fixed: bug from original Sociable prevented 'add to favorites' from working in IE
+* Settings option added to place the tagline left of the icons or above them.
+* Tagline has been moved to just above icons, under the like button.
+
+= IN DEVELOPMENT =
 * I'd like to hear from you!  Please don't be shy about writing with your suggestions and enhancements.
-* Fixed issue with icon backgrounds in some themes
-* Added option for facebook 'like' button and text color scheme to [pro version](http://wpplugins.com/plugin/155/sociable-pro)
-* Added option for facebook faces to [pro version](http://wpplugins.com/plugin/155/sociable-pro) 
+* Icon animations
+* Facebook javascript toolkit and and FBML to make your blog pages stand out
+* Additional URL shorteners
 
 = FEATURES =
 * Social bookmarking for WordPress 3.0 and multisite
@@ -92,6 +98,14 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 
 == Changelog ==
+= 5.09 =
+* Fixed: incorrect spacing for the Facebook 'standard 'icon
+* Added option to position tagline above or left of the icons
+* Moved the tagline position to just above the icons, rather than above the facebook 'like' button
+* Tagline CSS now sets font weight, so <strong> tags can be removed from the tagline
+* Added 'text-align: left' to div.sociable CSS to override WP default text justification for posts (which affects tagline)
+* Removed these CSS classes, which are not being used: span.sociable-tagline, span.sociable-tagline span, span.sociable-tagline:hover span
+* Fixed: error in addtofavorites.js when using IE
 
 = 5.08 =
 * Added !important modifier to CSS for images to prevent overrides by some themes
@@ -101,78 +115,3 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 = 5.07 =
 * Added code to block PRO version from wordpress repository updates (which will downgrade to regular version)
 
-= 5.06 =
-* Added "display-inline" to ".sociable img" CSS class for themes that may cause vertical icons
-* Fixed a bug causing "sociable_custom.css" to not load
-* Fixed a bug preventing tooltips from displaying
-
-= 5.05 =
-* The 5.04 fix only worked for IE.  This one should fix Firefox as well.
-* The problem was caused by using 'white-space:nowrap' to attempt to keep the image captions with the icons during line wraps
-
-= 5.04 =
-* Fix for CSS issue some folks had with icons not wrapping
-* Fix for bug where no content returned when sociable disabled for individual post (thanks, Marian!)
-
-= 5.03 =
-* Bit.ly support added to Pro version.  Uses V3 API.  Short URLs are saved to the post to speed up fetching.
-* Facebook 'like' button added to Pro version.  Note that you can adjust the CSS for the iframe in sociable.css.
-* Tweaks to CSS to make icons closer (as they were originally) when the captions aren't displayed.  Check your site after upgrading.
-* Rewrote URL generation to be faster and only require one database read per post
-* Bebo service added
-* "Follow" icon set added to Pro
-
-= 5.02 =
-* Icon captions added.  Set checkbox on the Sociable settings screen to display the site name next to each icon.
-* Captions are enclosed in a <span> tag, e.g. <a><img><span>caption</span></a>.  Style captions with class 'socable_caption'.
-* Moved Sociable filter for other plugins that may activate after Sociable
-
-= 5.01 =
-* Fixed bug in target=blank, should now work correctly
-* Fixed directory for 'tydlinka' icons in Pro
-* Added links to other icon sets in Pro
-
-= 5.00 =
-* Update to Buzz link, bug fixes in shortcode and template tags
-* Corrected an XHTML validation error
-* Custom images are now only available in the [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) version.  See the Frequently Asked Questions section for instructions.
-
-= 4.0.9 =
-* Added Orkut, Google Buzz services
-* New code for icon paths and urls
-* Admin screen bug fix, site order field removed
-
-= 4.0.8 =
-* Added [sociable] shortcode
-
-= 4.0.7 =
-* Fixed bug in RSS output
-
-= 4.0.6 =
-* i18n fixed
-* Options are now (I think) WPMU/multisite compatible
-* "Use CSS" option removed - for custom CSS create a file "sociable_custom.css" in the sociable directory
-* usetextlinks and disablesprites removed
-* awe.sm options removed
-
-= 4.0.3 - 4.0.5 =
-* Various array type bugs fixed
-
-= 4.0.2 =
-* Fixed bug that prevented meta box from displaying in post edit screen
-
-= 4.0.1 =
-* Fixed error in original code for wp_insert_post hook
-
-= 4.0.0 =
-* Woo-hoo Sociable for WordPress 3.0 released and working!  Sociable is now WordPress 3.0 compatible and many more enhancements to come.
-* Sociable core code re-written to object-oriented PHP and WP 3.0
-
-== Screenshots ==
-1. Sociable icons
-2. Sociable in a blog
-3. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) Facebook 'like' button with comments
-4. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) twitter icons
-5. [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) tooltips
-6. A few of the [Sociable Pro](http://wpplugins.com/plugin/155/sociable-pro) icon sets
-7. Sociable options screen.  Just drag and drop the bookmarks to change their display order.

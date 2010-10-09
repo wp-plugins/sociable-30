@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: sociable,sexy bookmarks,sexy,social,bookmark,social bookmarks,social bookmark,bookmarks,bookmarking,social bookmarking,sharing,sociable,share,sharethis,Add to favorites,BarraPunto,Bitacoras.com,BlinkList,blogmarks,Blogosphere,blogtercimlap,Faves,connotea,Current,del.icio.us,Design Float,Digg,Diigo,DotNetKicks,DZone,eKudos,email,Facebook,Fark,Fleck,FriendFeed,FSDaily,Global Grind,Google,Google Buzz,Gwar,HackerNews,Haohao,HealthRanker,HelloTxt,Hemidemi,Hyves,Identi.ca,IndianPad,Internetmedia,Kirtsy,laaik.it,LaTafanera,LinkArena,LinkaGoGo,LinkedIn,Linkter,Live,Meneame,MisterWong,MisterWong.DE,Mixx,MOB,muti,MyShare,MySpace,MSNReporter,N4G,Netvibes,NewsVine,Netvouz,NuJIJ,Orkut,Ping.fm,Posterous,PDF,Plurk,Print,Propeller,Ratimarks,Rec6,Reddit,RSS,Scoopeo,Segnalo,SheToldMe,Simpy,Slashdot,Socialogs,SphereIt,Sphinn,StumbleUpon,Techmeme,Technorati,ThisNext,Tipd,Tumblr,Twitter,Upnews,viadeo FR,Webnews.de,Webride,Wikio,Wikio FR,Wikio IT,Wykop,Xerpi,YahooBuzz,Yahoo! Bookmarks,Yigg, XHTML, facebook, facebook like, like button, facebook button, facebook like button, bit.ly, bitly, bebo
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 5.10
+Stable tag: 5.11
 
 == Description ==
 
@@ -93,9 +93,14 @@ The complete list is: sociable,sexy bookmarks,sexy,social,bookmark,social bookma
 
 
 == Changelog ==
+= 5.11 =
+* Updated plugin to use the newer printfriendly service
+* Added better debugging information
+
 = 5.10 =
 * Fixed 404 errors from automatic inclusion of 'sociable_custom.css' stylesheet.  For custom CSS with this version: (1) name your file 'custom.css' (without the 'sociable') and (2) set the 'Custom CSS' checkbox in the Sociable settings screen.
 * Warning message during activation fixed
+
 = 5.09 =
 * Fixed: incorrect spacing for the Facebook 'standard 'icon
 * Added option to position tagline above or left of the icons
